@@ -9,7 +9,7 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to Wizdom Software Technologies Training Institute Hyderabad, Telangana </h1>
+<h1 align="center">WELCOME TO DOCKER WORLD Hyderabad, Telangana </h1>
 <h1 align="center"> Wizdom Technologies Ameerpet, Hyderabad Very Good Training center for DevOps Master Program with AWS in Hyderabad India and also for Job Assitance Job Support also...Teaching Real Time scnerios</h1>
 <hr>
 <br>
