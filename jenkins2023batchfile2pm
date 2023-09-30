@@ -2,6 +2,8 @@ node{
 echo "Job Name is:  ${env.JOB_NAME}"
 echo "Node Name is:  ${env.NODE_NAME}"
 
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '5', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
+
 def mavenHome = tool name: 'maven 3.9.3'
 //Get the Code from the GitHub Server
 stage('CheckoutCode') {
