@@ -1,3 +1,4 @@
+
 def notifyBuild(String buildStatus = 'STARTED') {
   // build status of null means successful
   buildStatus =  buildStatus ?: 'SUCCESSFUL'
@@ -61,7 +62,8 @@ sh "scp -o  StrictHostKeyChecking=no target/maven-web-application.war root@192.1
 }
 */
 }//Try Closing
-  catch(e){
+  catch(e)
+  {
   currentBuild.result = "FAILED"
   }
   finally{
