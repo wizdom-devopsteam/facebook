@@ -1,3 +1,29 @@
+def notifyBuild(String buildStatus = 'STARTED') {
+  // build status of null means successful
+  buildStatus =  buildStatus ?: 'SUCCESSFUL'
+
+  // Default values
+  def colorName = 'RED'
+  def colorCode = '#FF0000'
+  def subject = "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'"
+  def summary = "${subject} (${env.BUILD_URL})"
+
+  // Override default values based on build status
+  if (buildStatus == 'STARTED') {
+    color = 'YELLOW'
+    colorCode = '#FFFF00'
+  } else if (buildStatus == 'SUCCESSFUL') {
+    color = 'GREEN'
+    colorCode = '#00FF00'
+  } else {
+    color = 'RED'
+    colorCode = '#FF0000'
+  }
+
+  // Send notifications
+  slackSend (color: colorCode, message: summary)
+}
+
 node{
 echo "Job Name is:  ${env.JOB_NAME}"
 echo "Node Name is:  ${env.NODE_NAME}"
@@ -5,6 +31,14 @@ echo "Node Name is:  ${env.NODE_NAME}"
 properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '5', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
 
 def mavenHome = tool name: 'maven 3.9.3'
+
+Try{
+
+}}//Try Closing
+
+}//Node Closing
+
+
 //Get the Code from the GitHub Server
 stage('CheckoutCode') {
 git branch: 'development', credentialsId: '5275dffa-3e40-4549-8436-4895f3620ff8', url: 'https://github.com/wizdom-devopsteam/facebook.git'
@@ -31,4 +65,12 @@ sh "scp -o  StrictHostKeyChecking=no target/maven-web-application.war root@192.1
 }
 }
 */
+}//Try Closing
+  catch(e){
+  currentBuild.result = "FAILED"
+  }
+  finally{
+
+sendSlackNotifications(currentBuild.result)
 }
+}}//Node Closing
