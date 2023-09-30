@@ -48,6 +48,7 @@ node {
     currentBuild.result = "FAILED"
   } 
   finally {
-    sendSlackNotifications(currentBuild.result)
+    //sendSlackNotifications(currentBuild.result)
+    slackSend (currentBuild.result)
   }
 }
