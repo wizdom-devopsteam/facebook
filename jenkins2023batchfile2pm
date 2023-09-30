@@ -32,6 +32,7 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '5', artifactNumToK
 
 def mavenHome = tool name: 'maven 3.9.3'
 
+Try{
 
 //Get the Code from the GitHub Server
 stage('CheckoutCode') {
