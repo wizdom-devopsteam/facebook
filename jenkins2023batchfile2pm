@@ -49,8 +49,6 @@ node {
   } 
   finally {
     //sendSlackNotifications(currentBuild.result)
-    sh 'echo ${currentBuild.result}'
-    slackSend (message: "${currentBuild.result}")
-    sh 'echo world'
+    notifyBuild(currentBuild.result)
   }
 }
