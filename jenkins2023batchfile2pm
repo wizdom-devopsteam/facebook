@@ -43,8 +43,8 @@ node {
       //To get the Variable Value
       sh "${mavenHome}/bin/mvn clean package"	
     }
-
-    throw new Exception("I am an error")
+    // Uncomment the below line for simultaing build FAILURE
+    // throw new Exception("I am an error")
   }//try closing
   catch (e) {
     currentBuild.result = "FAILED"
