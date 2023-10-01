@@ -50,7 +50,7 @@ node {
   finally {
     //sendSlackNotifications(currentBuild.result)
     sh 'echo hello'
-    slackSend (message: currentBuild.result)
+    slackSend (message: "Hello World")//currentBuild.result)
     sh 'echo world'
   }
 }
