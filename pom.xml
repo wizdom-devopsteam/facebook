@@ -21,7 +21,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://192.168.202.151:9000/</sonar.host.url>
+		<sonar.host.url>http://192.168.202.155:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>sonar</sonar.password> 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -98,7 +98,7 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Wizdom Technologies Releases Nexus Repository</name>
-	      <url>http://192.168.202.146:8081/wizdomtechnologies/repository/facebook-release/</url>
+	      <url>http://192.168.202.152:8081/wizdomtechnologies/repository/facebook-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
