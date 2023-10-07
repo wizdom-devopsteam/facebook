@@ -9,7 +9,7 @@
 </head>
 </head>
 <body>
-<h1 align="center">Checking the JaCoCo Report For 7pm Batch, Telangana </h1>
+<h1 align="center">DevOps Live Demo, Telangana </h1>
 <h1 align="center"> Wizdom Technologies Ameerpet, Hyderabad Very Good Training center for DevOps Master Program with AWS in Hyderabad India and also for Job Assitance Job Support also...Teaching Real Time scnerios</h1>
 <hr>
 <br>
