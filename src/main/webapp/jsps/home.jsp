@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1 align="center">DevOps Live Demo, Telangana </h1>
-<h1 align="center"> Wizdom Technologies Ameerpet, Hyderabad Very Good Training center for DevOps Master Program with AWS in Hyderabad India and also for Job Assitance Job Support also...Teaching Real Time scnerios</h1>
+<h1 align="center"> Updating the code for Docker Hub, Wizdom Technologies Ameerpet, Hyderabad Very Good Training center for DevOps Master Program with AWS in Hyderabad India and also for Job Assitance Job Support also...Teaching Real Time scnerios</h1>
 <hr>
 <br>
 	<h1><h3> Server Side IP Address </h3><br>
